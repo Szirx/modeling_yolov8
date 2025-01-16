@@ -1,0 +1,28 @@
+default_language_version:
+  python: python3.10
+repos:
+  - repo: local
+    hooks:
+      - id: run-tests
+        name: Run tests
+        entry: pytest tests/
+        language: system
+        types: [ python ]
+      - id: flake8
+        name: flake8
+        description: wemake-python-styleguide enforcement
+        entry: flake8
+        args: [--config tox.ini]
+        language: python
+        types: [ python ]
+        exclude: ^ultralfytics/
+  - repo: 'https://github.com/pycqa/isort'
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        exclude: ^ultralytics/
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.5.1
+    hooks:
+      - id: add-trailing-comma
+        exclude: ^ultralytics/

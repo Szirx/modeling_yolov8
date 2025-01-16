@@ -1,0 +1,17 @@
+path: '../../files/private_data/vacation/modeling-yolov8'
+train: 'annotations_train.txt'
+val: 'annotations_val.txt'
+
+nc: 11
+names:
+  0: 'dump_truck'
+  1: 'excavator'
+  2: 'motor_grader'
+  3: 'ice_rink'
+  4: 'kmu'
+  5: 'trailer'
+  6: 'forklift'
+  7: 'bucket_loader'
+  8: 'mixer'
+  9: 'tank'
+  10: 'bulldozer'

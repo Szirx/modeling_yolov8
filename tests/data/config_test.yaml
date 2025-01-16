@@ -1,0 +1,17 @@
+best_model_path: "weights/yolov8s.pt"
+path_image_predict: ""
+save_results_path: "src/inference/results"
+data_experiment_name: "test_predict_1"
+save_segmentations_json: true
+yolo:
+  conf: 0.4
+  iou: 0.5
+  agnostic_nms: true
+  max_det: 2000
+  imgsz: 1024
+  show_labels: false
+  show_conf: false
+  show_boxes: false
+  line_width: 1
+  augment: true
+  retina_masks: true

@@ -1,0 +1,24 @@
+experiment_name: Detection
+cfg_model_path: configs/trainmodelconfig/detect/model_detect.yaml
+cfg_data_path: configs/traindataconfigs/data_detection.yaml
+pretrained_path: weights/yolov8s.pt
+cfg_mlflow:
+  mlflow_tracking_uri: null
+debug_config:
+  each_epoch: 1
+  predictor_model_base_path: weights/yolov8s.pt
+  conf: 0.45
+  iou: 0.5
+  path_with_test_images: private_data
+  agnostic_nms: True
+  max_det: 2000
+  imgsz: 640
+  show_labels: False
+  show_conf: False
+  show_boxes: False
+  line_width: False
+  augment: 1
+  retina_masks: True
+yolo_settings_update:
+  clearml: False
+  mlflow: False
