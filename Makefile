@@ -34,13 +34,13 @@ clean:
 
 
 crop:
-	python3 data/prepare/crop/crop.py --coco_annotation_path '../../../shared_data/SatelliteTo3D-Datasets/OilDepots/instances_Train_v2.json' --images_dir '../../../shared_data/SatelliteTo3D-Datasets/OilDepots' --output_dir '../../../shared_data/SatelliteTo3D-Datasets/OilDepots/cropped_od_v2'
+	python3 data/prepare/crop/crop.py --coco_annotation_path '' --images_dir ''
 
 coco2yolo:
-	python data/prepare/converters/coco2yolo.py --path_to_coco_json '../../../shared_data/SatelliteTo3D-Datasets/OilDepots/cropped_od_v2/annotations.json' --output_path '../../../shared_data/SatelliteTo3D-Datasets/OilDepots/cropped_od_v2' --normalize false --use_bbox true --shift_category 1
+	python data/prepare/converters/coco2yolo.py --path_to_coco_json '' --output_path '' --normalize false --use_bbox true --shift_category 1
 
 split_data:
-	python3 data/prepare/split/split_data.py --image_folder '../../../shared_data/SatelliteTo3D-Datasets/OilDepots/cropped_od_v2'
+	python3 data/prepare/split/split_data.py --image_folder ''
 
 train:
 	python3 train.py --trainer_config configs/trainerconfigs/detection/trainer_config_detection.yaml
